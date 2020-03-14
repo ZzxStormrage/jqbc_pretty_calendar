@@ -1,0 +1,127 @@
+html,
+body {
+  height: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.calendar-wrap {
+  border: 1px solid rgba(226, 232, 236);
+  border-radius: 3px;
+  padding: 0;
+}
+
+.calendar {
+  overflow: hidden;
+  .jqyc-year-chooser {
+    background-color: #fff;
+    .year-header {
+      border-bottom: 1px solid rgba(226, 232, 236);
+      &.row {
+        margin: 0;
+      }
+      .jqyc-month {
+        &.start_month {
+          color: rgb(101, 189, 195);
+          background-color: rgb(228, 246, 247);
+        }
+      }
+      .year-btn {
+        border: none;
+        background-color: #fff;
+        height: 50px;
+        background-color: rgba(246, 248, 249);
+        &:not(:last-child) {
+          border-right: 1px solid rgba(226, 232, 236);
+        }
+        &:last-child {
+          background-color: white;
+        }
+        &:first-child {
+          background-color: white;
+        }
+        &:hover {
+          background-color: rgb(228, 246, 247);
+          color: rgb(101, 189, 195);
+        }
+        &.active {
+          background-color: rgb(228, 246, 247);
+          color: rgb(101, 189, 195);
+        }
+      }
+    }
+
+    .date-title-wrap {
+      margin: 30px;
+    }
+
+    .week_wrap {
+      margin: 0 30px;
+      .week_list {
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+
+        .jqyc-week-ul {
+          display: flex;
+          justify-content: space-between;
+          padding: 0;
+          &:not(:last-child) {
+            padding: 0 2%;
+            // margin-right: 2%;
+            border-right: 1px solid rgba(226, 232, 236);
+          }
+          &:last-child {
+            padding-left: 2%;
+          }
+          &:first-child {
+            padding-left: 0;
+          }
+          .jqyc-li {
+            margin-right: 3px;
+            font-size: 12px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 1;
+            &.start_date {
+              .week-day {
+                width: 20px;
+                height: 20px;
+                line-height: 19px;
+                background-color: #dc3545;
+                color: white;
+                border-radius: 50%;
+              }
+            }
+            .week-day {
+              width: 20px;
+              height: 20px;
+              line-height: 19px;
+            }
+
+            &.active {
+              .week-day {
+                background-color: #17a2b8;
+                color: white;
+                border-radius: 50%;
+              }
+            }
+            &:hover {
+              color: rgb(101, 189, 195);
+            }
+            .week-date {
+              font-weight: 600;
+              margin-bottom: 5px;
+            }
+            .week-date,
+            .week-day {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "list": [
+    {
+      "customer_name": "张三",
+      "day": 1,
+      "status": 0,
+      "what_time": 0,
+      "date": "14:15"
+    },
+    {
+      "customer_name": "张三",
+      "day": 1,
+      "status": 1,
+      "what_time": 0,
+      "date": "14:15"
+    },
+    {
+      "customer_name": "张三",
+      "day": 1,
+      "status": 2,
+      "what_time": 0,
+      "date": "14:15"
+    },
+    {
+      "customer_name": "张三",
+      "day": 1,
+      "status": 3,
+      "what_time": 0,
+      "date": "14:15"
+    },
+    {
+      "customer_name": "张三",
+      "day": 1,
+      "status": 4,
+      "what_time": 0,
+      "date": "14:15"
+    },
+    {
+      "customer_name": "张三",
+      "day": 1,
+      "status": 0,
+      "what_time": 0,
+      "date": "14:15"
+    },
+    {
+      "customer_name": "张三",
+      "day": 1,
+      "status": 0,
+      "what_time": 0,
+      "date": "14:15"
+    },
+    {
+      "customer_name": "张三",
+      "day": 1,
+      "status": 0,
+      "what_time": 0,
+      "date": "14:15"
+    },
+    {
+      "customer_name": "张三",
+      "day": 2,
+      "status": 0,
+      "what_time": 0,
+      "date": "14:15"
+    }
+  ]
+}

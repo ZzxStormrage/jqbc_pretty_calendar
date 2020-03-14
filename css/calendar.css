@@ -1,0 +1,114 @@
+html,
+body {
+  height: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.calendar-wrap {
+  border: 1px solid rgba(226, 232, 236);
+  border-radius: 3px;
+  padding: 0;
+}
+.calendar {
+  overflow: hidden;
+}
+.calendar .jqyc-year-chooser {
+  background-color: #fff;
+}
+.calendar .jqyc-year-chooser .year-header {
+  border-bottom: 1px solid rgba(226, 232, 236);
+}
+.calendar .jqyc-year-chooser .year-header.row {
+  margin: 0;
+}
+.calendar .jqyc-year-chooser .year-header .jqyc-month.start_month {
+  color: #65bdc3;
+  background-color: #e4f6f7;
+}
+.calendar .jqyc-year-chooser .year-header .year-btn {
+  border: none;
+  background-color: #fff;
+  height: 50px;
+  background-color: rgba(246, 248, 249);
+}
+.calendar .jqyc-year-chooser .year-header .year-btn:not(:last-child) {
+  border-right: 1px solid rgba(226, 232, 236);
+}
+.calendar .jqyc-year-chooser .year-header .year-btn:last-child {
+  background-color: white;
+}
+.calendar .jqyc-year-chooser .year-header .year-btn:first-child {
+  background-color: white;
+}
+.calendar .jqyc-year-chooser .year-header .year-btn:hover {
+  background-color: #e4f6f7;
+  color: #65bdc3;
+}
+.calendar .jqyc-year-chooser .year-header .year-btn.active {
+  background-color: #e4f6f7;
+  color: #65bdc3;
+}
+.calendar .jqyc-year-chooser .date-title-wrap {
+  margin: 30px;
+}
+.calendar .jqyc-year-chooser .week_wrap {
+  margin: 0 30px;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul:not(:last-child) {
+  padding: 0 2%;
+  border-right: 1px solid rgba(226, 232, 236);
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul:last-child {
+  padding-left: 2%;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul:first-child {
+  padding-left: 0;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li {
+  margin-right: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li.start_date .week-day {
+  width: 20px;
+  height: 20px;
+  line-height: 19px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li .week-day {
+  width: 20px;
+  height: 20px;
+  line-height: 19px;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li.active .week-day {
+  background-color: #17a2b8;
+  color: white;
+  border-radius: 50%;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li:hover {
+  color: #65bdc3;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li .week-date {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li .week-date,
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li .week-day {
+  display: block;
+}

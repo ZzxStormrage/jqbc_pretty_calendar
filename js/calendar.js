@@ -170,6 +170,10 @@
             'jqbc-date=' + [settings.startYear, settings.satrtMonth, settings.satrtDate, settings.satrtDay] + '>' + current_date + '</h4>'
         $('.date-title-wrap').append(dateTitle)
 
+        // 回到今天按钮
+        var backToDay = '<a class="today">today</a>'
+        $('.date-title-wrap').append(backToDay)
+
         // 每个月的日历 计算多少天
         var results = jqycGetMonthHTMLStringWithData(year, settings.satrtMonth);
         $('.week_list').append(results.monthHTMLString)

@@ -5,7 +5,7 @@
 
         // 获取日历时间
         var date = $('.date-title').attr('jqbc-date').split(',')
-        var currentDate = new Date();
+        var currentDate = new Date('2020,3,15');
         var day = currentDate.getDay()
 
         if (day == 0) {
@@ -19,7 +19,7 @@
 
         if (date[0] == currentDate.getFullYear() && date[1] == currentDate.getMonth() + 1
             && date[2] == currentDate.getDate()) {
-            $('.jqbc-table-day').eq(day - 1).addClass('start_day')
+            $('.jqbc-table-day').eq(day).addClass('start_day')
         } else {
             $('.jqbc-table-day').eq(date[3] - 1).addClass('active')
         }
@@ -61,8 +61,6 @@
 
         let parse = eval(compile(tableDom));
         $this.append(parse());
-
-
 
     }
 

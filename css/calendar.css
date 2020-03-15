@@ -24,9 +24,13 @@ ul {
 .calendar .jqyc-year-chooser .year-header.row {
   margin: 0;
 }
-.calendar .jqyc-year-chooser .year-header .jqyc-month.start_month {
-  color: #65bdc3;
+.calendar .jqyc-year-chooser .year-header .jqyc-month.active:not('.start_month') {
   background-color: #e4f6f7;
+  color: #65bdc3;
+}
+.calendar .jqyc-year-chooser .year-header .jqyc-month.start_month {
+  color: white;
+  background-color: #dc3545;
 }
 .calendar .jqyc-year-chooser .year-header .year-btn {
   border: none;
@@ -44,10 +48,6 @@ ul {
   background-color: white;
 }
 .calendar .jqyc-year-chooser .year-header .year-btn:hover {
-  background-color: #e4f6f7;
-  color: #65bdc3;
-}
-.calendar .jqyc-year-chooser .year-header .year-btn.active {
   background-color: #e4f6f7;
   color: #65bdc3;
 }

@@ -61,9 +61,12 @@
             }
             // 选择月份点击事件
             function selectMoth() {
+
                 var month = $(this).index()
+                console.log('选中月份', month);
                 settings.satrtMonth = month
                 createWholeCalendar(settings, $calendar);
+                $('.jqyc-month').eq(month - 1).addClass('active')
                 addClickEvent()
                 $calendar.trigger("jqyc.changeDateToPrevious", settings);
             }

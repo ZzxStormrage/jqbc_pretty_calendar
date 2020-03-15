@@ -23,9 +23,13 @@ ul {
         margin: 0;
       }
       .jqyc-month {
-        &.start_month {
-          color: rgb(101, 189, 195);
+        &.active:not('.start_month') {
           background-color: rgb(228, 246, 247);
+          color: rgb(101, 189, 195);
+        }
+        &.start_month {
+          color: white;
+          background-color: #dc3545;
         }
       }
       .year-btn {
@@ -43,10 +47,6 @@ ul {
           background-color: white;
         }
         &:hover {
-          background-color: rgb(228, 246, 247);
-          color: rgb(101, 189, 195);
-        }
-        &.active {
           background-color: rgb(228, 246, 247);
           color: rgb(101, 189, 195);
         }

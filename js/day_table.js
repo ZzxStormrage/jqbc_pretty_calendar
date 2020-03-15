@@ -17,12 +17,17 @@
             active_day = 6
         }
 
+        console.log(date[2]);
+        console.log(currentDate.getDate());
+
+
+
         if (date[0] == currentDate.getFullYear() && date[1] == currentDate.getMonth() + 1
             && date[2] == currentDate.getDate()) {
             $('.jqbc-table-day').eq(day).addClass('start_day')
-        } else {
-            $('.jqbc-table-day').eq(date[3] - 1).addClass('active')
         }
+        $('.jqbc-table-day').eq(date[3] - 1).addClass('active')
+
 
 
     }

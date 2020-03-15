@@ -29,14 +29,7 @@
 
             // 创建DOM
             createWholeCalendar(settings, this);
-
-            $calendar.find('.jqyc-prev-year').on("click", showPreviousYear);
-            $calendar.find('.jqyc-next-year').on("click", showNextYear);
-
-            // 给月份 添加点击事件
-            $calendar.find('.jqyc-month').on("click", selectMoth);
-            // 给星期添加点击事件
-            $calendar.find('.jqyc-li').on("click", selectDay);
+            addClickEvent()
 
             // 上一年 点击事件
             function showPreviousYear() {
@@ -85,12 +78,30 @@
                 addClickEvent()
                 $calendar.trigger("jqyc.changeDateToPrevious", settings);
             }
+            // 回到今天点击事件
+            function goToday() {
+                console.log('回到今天');
+                // var currentDate = new Date();
+                settings.startYear = currentDate.getFullYear()
+                settings.satrtMonth = currentDate.getMonth() + 1
+                settings.satrtDate = currentDate.getDate()
+                settings.satrtDay = currentDate.getDay()
+
+                console.log(currentDate.getMonth() + 1);
+                console.log(settings);
+
+                createWholeCalendar(settings, $calendar);
+                addClickEvent()
+                $calendar.trigger("jqyc.goToday", settings);
+
+            }
 
             function addClickEvent() {
                 $calendar.find('.jqyc-prev-year').on("click", showPreviousYear);
                 $calendar.find('.jqyc-next-year').on("click", showNextYear);
                 $calendar.find('.jqyc-month').on("click", selectMoth);
                 $calendar.find('.jqyc-li').on("click", selectDay);
+                $calendar.find('.today').on("click", goToday);
             }
 
             return methods.init.apply(this, arguments)
@@ -164,7 +175,10 @@
             var monthDom = $('<button class="year-btn jqyc-month col">' + m.slice(0, 3) + '</button>')
             $('.jqyc-prev-year').after(monthDom)
         });
-        $('.jqyc-month').eq(currentDate.getMonth()).addClass('start_month')
+        if (year == currentDate.getFullYear()) {
+            $('.jqyc-month').eq(currentDate.getMonth()).addClass('start_month')
+
+        }
 
         // 显示中文年月日星期
         var current_date = settings.startYear + '年' + settings.satrtMonth + '月' + settings.satrtDate +

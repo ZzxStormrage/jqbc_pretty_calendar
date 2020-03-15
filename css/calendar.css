@@ -24,7 +24,7 @@ ul {
 .calendar .jqyc-year-chooser .year-header.row {
   margin: 0;
 }
-.calendar .jqyc-year-chooser .year-header .jqyc-month.active:not('.start_month') {
+.calendar .jqyc-year-chooser .year-header .jqyc-month.active {
   background-color: #e4f6f7;
   color: #65bdc3;
 }
@@ -53,6 +53,15 @@ ul {
 }
 .calendar .jqyc-year-chooser .date-title-wrap {
   margin: 30px;
+  display: flex;
+}
+.calendar .jqyc-year-chooser .date-title-wrap .today {
+  line-height: 2;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.calendar .jqyc-year-chooser .date-title-wrap .today:hover {
+  color: #65bdc3;
 }
 .calendar .jqyc-year-chooser .week_wrap {
   margin: 0 30px;
@@ -83,6 +92,11 @@ ul {
   text-align: center;
   line-height: 1;
 }
+.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li.active .week-day {
+  background-color: #17a2b8;
+  color: white;
+  border-radius: 50%;
+}
 .calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li.start_date .week-day {
   width: 20px;
   height: 20px;
@@ -95,11 +109,6 @@ ul {
   width: 20px;
   height: 20px;
   line-height: 19px;
-}
-.calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li.active .week-day {
-  background-color: #17a2b8;
-  color: white;
-  border-radius: 50%;
 }
 .calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li:hover {
   color: #65bdc3;

@@ -23,7 +23,7 @@ ul {
         margin: 0;
       }
       .jqyc-month {
-        &.active:not('.start_month') {
+        &.active {
           background-color: rgb(228, 246, 247);
           color: rgb(101, 189, 195);
         }
@@ -55,6 +55,15 @@ ul {
 
     .date-title-wrap {
       margin: 30px;
+      display: flex;
+      .today {
+        line-height: 2;
+        margin-left: 10px;
+        cursor: pointer;
+        &:hover {
+          color: rgb(101, 189, 195);
+        }
+      }
     }
 
     .week_wrap {
@@ -85,6 +94,13 @@ ul {
             cursor: pointer;
             text-align: center;
             line-height: 1;
+            &.active {
+              .week-day {
+                background-color: #17a2b8;
+                color: white;
+                border-radius: 50%;
+              }
+            }
             &.start_date {
               .week-day {
                 width: 20px;
@@ -101,13 +117,6 @@ ul {
               line-height: 19px;
             }
 
-            &.active {
-              .week-day {
-                background-color: #17a2b8;
-                color: white;
-                border-radius: 50%;
-              }
-            }
             &:hover {
               color: rgb(101, 189, 195);
             }

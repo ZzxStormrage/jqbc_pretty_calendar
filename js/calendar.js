@@ -58,7 +58,26 @@
                 var month = $(this).index()
                 console.log('选中月份', month);
                 settings.satrtMonth = month
+                
+                if (month != currentDate.getMonth() + 1) {
+                  settings.satrtDate = 1
+                  var date = new Date(settings.startYear,settings.satrtMonth,1)
+                  
+                  var day = date.getDay()
+                  console.log(day);
+
+                  if (day == 0) {
+                    day = 6
+                  }
+                  settings.satrtDay = day
+                }else {
+                  settings.satrtDate = currentDate.getDate()
+                  settings.satrtDay =  currentDate.getDay()
+                }
                 createWholeCalendar(settings, $calendar);
+                if (month != currentDate.getMonth() + 1) {
+                  $('.jqyc-li').eq(0).addClass('active')
+                }
                 $('.jqyc-month').eq(month - 1).addClass('active')
                 addClickEvent()
                 $calendar.trigger("jqyc.changeDateToPrevious", settings);

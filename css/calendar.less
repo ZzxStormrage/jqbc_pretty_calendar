@@ -7,6 +7,24 @@ ul {
   padding: 0;
   margin: 0;
 }
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.align-middle {
+  vertical-align: middle;
+}
 .calendar-wrap {
   border: 1px solid rgba(226, 232, 236);
   border-radius: 3px;
@@ -56,6 +74,7 @@ ul {
     .date-title-wrap {
       margin: 30px;
       display: flex;
+      align-items: center;
       .today {
         line-height: 2;
         margin-left: 10px;
@@ -105,7 +124,7 @@ ul {
               .week-day {
                 width: 20px;
                 height: 20px;
-                line-height: 19px;
+                line-height: 20px;
                 background-color: #dc3545;
                 color: white;
                 border-radius: 50%;

@@ -2,6 +2,24 @@ html,
 body {
   height: 100%;
 }
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.align-middle {
+  vertical-align: middle;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -54,6 +72,7 @@ ul {
 .calendar .jqyc-year-chooser .date-title-wrap {
   margin: 30px;
   display: flex;
+  align-items: center;
 }
 .calendar .jqyc-year-chooser .date-title-wrap .today {
   line-height: 2;
@@ -100,7 +119,7 @@ ul {
 .calendar .jqyc-year-chooser .week_wrap .week_list .jqyc-week-ul .jqyc-li.start_date .week-day {
   width: 20px;
   height: 20px;
-  line-height: 19px;
+  line-height: 20px;
   background-color: #dc3545;
   color: white;
   border-radius: 50%;

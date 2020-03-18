@@ -61,15 +61,15 @@
                 
                 if (month != currentDate.getMonth() + 1) {
                   settings.satrtDate = 1
-                  var date = new Date(settings.startYear,settings.satrtMonth,1)
+                  var date = new Date(settings.startYear,month -1,1)
                   
                   var day = date.getDay()
-                  console.log(day);
-
                   if (day == 0) {
                     day = 6
                   }
                   settings.satrtDay = day
+                  settings.satrtDate = date.getDate()
+                  
                 }else {
                   settings.satrtDate = currentDate.getDate()
                   settings.satrtDay =  currentDate.getDay()
@@ -92,6 +92,8 @@
                 var date = $(this).attr('data-day-of-month')
                 settings.satrtDay = day
                 settings.satrtDate = date
+                console.log(settings);
+                
                 createWholeCalendar(settings, $calendar);
                 $('.jqyc-li').eq(date - 1).addClass('active')
                 addClickEvent()
@@ -196,8 +198,8 @@
         });
         if (year == currentDate.getFullYear()) {
             $('.jqyc-month').eq(currentDate.getMonth()).addClass('start_month')
-
         }
+        $('.jqyc-month').eq(settings.satrtMonth - 1).addClass('active')
 
         // 显示中文年月日星期
         var current_date = settings.startYear + '年' + settings.satrtMonth + '月' + settings.satrtDate +
@@ -211,6 +213,8 @@
         $('.date-title-wrap').append(backToDay)
 
         // 每个月的日历 计算多少天
+        console.log(settings);
+        
         var results = jqycGetMonthHTMLStringWithData(year, settings.satrtMonth);
         $('.week_list').append(results.monthHTMLString)
 
@@ -223,11 +227,13 @@
     function jqycGetMonthHTMLStringWithData(year, month) {
 
         // 计算当前年月 1号是星期几
-        var firstDay = getYearDay(year, month - 1)
+        var firstDay = getYearDay(year, month -1)
         var days = getYearMonthDays(year, month)
 
         // 用于计算的 星期几
         var c_day = parseInt(firstDay)
+        console.log(c_day);
+        
 
         if (c_day == 0) {
             c_day = 7
